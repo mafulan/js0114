@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="fm">
+        <input type="text" name="q"/>
+        <button type="submit">提交</button>
+        <button type="reset">重置</button>
+    </form>
+    <script>
+    var oF = document.getElementById("fm");
+    // oF.q.onchange = function (){
+    //     console.log("值发生了变化");
+    // }
+    oF.onsubmit = function (){
+        return false;
+    }
+    oF.onreset = function (){
+        return false;
+    }
+    </script>
+</body>
+</html>

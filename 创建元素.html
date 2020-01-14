@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+
+    </ul>
+    <button>创建li</button>
+    <script>
+    var oUl = document.getElementsByTagName("ul")[0];
+    var oBtn = document.getElementsByTagName("button")[0];
+    var i = 0;
+    oBtn.onclick = function (){
+        // oUl.innerHTML += "<li></li>";
+        var oLi = document.createElement("li");
+        oLi.innerHTML = i++;
+        oLi.onclick = function (){
+            this.style.backgroundColor = "red";
+        }
+        // oUl.appendChild(oLi);
+        oUl.children[0] ? oUl.insertBefore(oLi,oUl.children[0]) : oUl.appendChild(oLi);
+    }
+    </script>
+</body>
+</html>

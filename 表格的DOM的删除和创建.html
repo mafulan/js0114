@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    td{
+        width: 200px;
+        height: 40px;
+        border: 1px #000 solid;
+    }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>我是表格标题</caption>
+        <thead>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>11</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>32</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+    <script>
+    var oTable = document.getElementsByTagName("table")[0];
+    oTable.deleteCaption();
+    oTable.deleteTHead();
+    oTable.deleteTFoot();
+    oTable.tBodies[0].deleteRow(2);
+    oTable.tBodies[0].rows[0].deleteCell(0);
+    oTable.tBodies[0].rows[1].deleteCell(1);
+    var oCap = oTable.createCaption();
+    oCap.innerHTML = "我是新的标题";
+    var oTh = oTable.createTHead();
+    var oTr = oTh.insertRow(0);
+    var oTd1 = oTr.insertCell(0);
+    oTd1.innerHTML = "00";
+    var oTd2 = oTr.insertCell(1);
+    oTd2.innerHTML = "01";
+    </script>
+</body>
+</html>

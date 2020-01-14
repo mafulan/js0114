@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        margin: 0;
+    }
+    #div1{
+        width: 500px;
+        height: 400px;
+        background-color: gray;
+        position: absolute;
+        left: 100px;
+        top: 200px;
+    }
+    #div2{
+        width: 350px;
+        height: 300px;
+        top: 50px;
+        left: 100px;
+        background-color: yellow;
+        position: absolute;
+    }
+    #div3{
+        width: 200px;
+        height: 150px;
+        background-color: red;
+        left: 100px;
+        top: 50px;
+        position: absolute;
+    }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3"></div>
+        </div>
+    </div>
+    <script>
+    var oDiv3 = document.getElementById("div3");
+    function offset(obj){
+        var arr = [0,0];
+        while(obj){
+            arr[0]+=obj.offsetLeft;
+            arr[1]+=obj.offsetTop;
+            obj = obj.offsetParent;
+        }
+        return arr;
+    }
+    console.log(offset(oDiv3));
+    </script>
+</body>
+</html>

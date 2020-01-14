@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+    var oTable = document.getElementsByTagName("table")[0];
+    // console.log(oTable.children[0].children[0]);
+    // oTable.caption = "我是表格标题";
+    oTable.tBodies[0].rows[0].cells[0].style.backgroundColor = "red";
+    </script>
+</body>
+</html>

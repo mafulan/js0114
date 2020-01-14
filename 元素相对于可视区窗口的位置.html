@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        margin: 0;
+    }
+    div{
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+        border: 3px #000 solid;
+        position: absolute;
+        left: 150px;
+        top: 200px;
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+    var oDiv = document.getElementsByTagName("div")[0];
+    var rect = oDiv.getBoundingClientRect();
+    console.log(rect.top,rect.left,rect.right,rect.bottom,rect.width,rect.height);
+    </script>
+</body>
+</html>

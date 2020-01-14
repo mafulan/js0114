@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="fm">
+        <input type="text" name="q">
+        <input type="radio" name="sex"/>男
+        <input type="radio" name="sex"/>女
+        <input type="checkbox" name="p"/>
+        <input type="checkbox" name="p"/>
+        <input type="checkbox" name="p"/>
+    </form>
+    <button>判断</button>
+    <script>
+    var oF = document.getElementById("fm");
+    var oBtn = document.getElementsByTagName("button")[0];
+    // console.log(oF.q);
+    // console.log(oF.sex);
+    oBtn.onclick = function (){
+        console.log(oF.sex[0].checked);
+    }
+    oF.p[2].onclick = function (){
+        return false;
+    }
+    document.oncontextmenu = function (){
+        return false;
+    }
+    </script>
+</body>
+</html>

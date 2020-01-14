@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>我是p元素</p>
+        <div>我是div元素</div>
+    </div>
+    <script>
+    var oP = document.getElementsByTagName("p")[0];
+    var oDiv = document.getElementsByTagName("div")[1];
+    oP.onclick = function (){
+        oP.parentNode.removeChild(oP);
+    }
+    oDiv.onclick = function (){
+        var oSp = document.createElement("span");
+        oSp.innerHTML = "我是span元素";
+        oDiv.parentNode.replaceChild(oSp,oDiv);
+    }
+    </script>
+</body>
+</html>

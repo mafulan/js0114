@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //获取一个元素相对于整个页面的位置
+    function offset(obj){
+       var arr=[0,0];
+       while(obj){
+           arr[0]+=obj.offsetLeft;
+           arr[1]+=obj.offsetTop;
+           obj = obj.offsetParent;
+       }
+         return  arr;
+   }
+
+    </script>
+</body>
+</html>
